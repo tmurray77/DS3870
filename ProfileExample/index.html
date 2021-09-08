@@ -16,9 +16,24 @@
         <p>Phone: (931) 802-4537</p>
         <p>Address: 1105 N. Peachtree Avenue</p>
         <p>Assignment: JOHN 307</p>
-        <input id="txtPayRate">
-        <input id="txtHours">
+        <div class="form-group">
+            <label for="txtPayRate">Pay Rate:</label>
+            <input id="txtPayRate">
+        </div>
+        <div class="form-group" id="divHours">
+            <label for="txtHours">Hours Worked:</label>
+            <input id="txtHours">
+        </div>
+        <div class="form-group">
+            <label for="cboEmployeeType">Employee Type:</label>
+            <select id="cboEmployeeType">
+                <option></option>
+                <option value="FULL">Full Time</option>
+                <option value="PART">Part Time</option>
+            </select>
+        </div>
         <button type="button" class="btn btn-warning mb-3" id ="btnTest">Edit Profile</button>
+    </div>    
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
