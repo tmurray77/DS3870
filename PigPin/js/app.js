@@ -1,19 +1,33 @@
+$.getJSON("https://www.swollenhippo.com/getEmployeesByAPIKey.php?APIKey=Mickey2021!", function(result){ 
+    var arrEmployees = [];
+    /* loop through array */
+    $.each(result, function(index, person){       
+        console.log(person.FirstName);
+        console.log(person.FirstName + ' ' + person.LastName);
+        $('#txtEmail').val(person.Email);     
+    });  
+ });
+
 $('#btnTest').click(function() {
     const decTaxRate = .0925;
-    let decHours = $('#txtHours').val() ;
-    let decRate = $('#txtPayRate').val() ;
+    let decHours = $('#txtHours').val();
+    let decRate = $('#txtPayRate').val();
     console.log(decHours * decRate);
 });
-//$('#txtPayRate').change(function(){
-//    alert($('#txtPayRate').val());
-//});
-$('#cboEmployeeType').change(function(){
+$('#cboEmployeeType').change(function() {
     if($('#cboEmployeeType').val() == 'FULL'){
-       // $('#divHours').slideUp();
-       // $('#divHours').css('display', 'none');
-       $('#divHours').addClass('d-none');
-    }else{
-        //$('#divHours').slideDown();
+        //$('#divHours').slideUp();
+        //$('#divHours').css('display','none');
+        $('#divHours').addClass('d-none');
+    }else {
         $('#divHours').removeClass('d-none').slideDown();
     }
-});
+})
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
