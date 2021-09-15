@@ -1,15 +1,8 @@
-
+  
 body {
     background-image: url("../images/background.jpg");
     height: 100%;
     width: 100%;
-    margin:2px;
+    margin:0px;
     background-size: auto;
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    }
-    
