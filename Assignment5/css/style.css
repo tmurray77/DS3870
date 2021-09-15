@@ -1,8 +1,14 @@
-  
+
 body {
     background-image: url("../images/background.jpg");
     height: 100%;
     width: 100%;
-    margin:0px;
+    margin:2px;
     background-size: auto;
+
 }
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    }

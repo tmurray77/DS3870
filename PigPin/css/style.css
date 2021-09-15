@@ -5,11 +5,15 @@ body {
     width: 100%;
     margin:2px;
     background-size: auto;
+
 }
 
 .row {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
     }
     
+.card{
+    flex-basis: auto;
+}
